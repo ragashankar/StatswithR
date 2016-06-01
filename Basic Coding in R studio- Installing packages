@@ -1,0 +1,8 @@
+install.pacakages("devtools") # installs devtools pckg
+library(devtools) # opens devtools pckg
+install_github("StatsWithR/statsr") # unpacks 34 pckgs including ggplot2
+install.packages("dplyr")
+installs.packages("ggplot2")
+library(ggplt2)
+library(dplyr)
+library(statsr)

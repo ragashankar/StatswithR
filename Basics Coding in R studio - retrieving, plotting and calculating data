@@ -1,4 +1,4 @@
-data(present) # Retrieve data of 'present' table 
+data("present") # Retrieve data of 'present' table 
 View(present) # View the table in a separate windiow
 dim(present) # Dimensions of the table (No. of rows and columns display)
 present$boys # Displays the column 'boys' in tbl 'present'

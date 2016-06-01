@@ -1,0 +1,5 @@
+present <- present %>% mutate(total=boys+girls) # Total no. of boys and girls
+present <- present %>% mutate(prop_boys = boys/total) # proportion of boys on total birth
+ggplot(data=present, aes(x=year,y=prop_boys)) + geom_line()
+present <- present %>% mutate(prop_boys_girls = boys/girls) # ratio of boys to girls
+ggplot(data=present,aes(x=year,y=prop_boys_girls)) + geom_point()+geom_line()

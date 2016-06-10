@@ -1,5 +1,6 @@
 data("present") # Retrieve data of 'present' table 
 View(present) # View the table in a separate windiow
+str(present) # View the data tyoes, dimensions,data etc.
 dim(present) # Dimensions of the table (No. of rows and columns display)
 present$boys # Displays the column 'boys' in tbl 'present'
 total <- present %>%  mutate(total=boys+girls) # Calculate the total no. of boys and girls for each row and store in total column

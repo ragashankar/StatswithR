@@ -11,3 +11,10 @@ nycflights <- nycflights %>%  mutate(dep_type = ifelse(dep_delay < 5, "on time",
 nycflights %>% group_by(month) %>% summarise(mean_dd=mean(arr_delay))%>% arrange(desc(mean_dd)) # calculate Mean
 
 assfo_feb_flights <- nycflights %>% filter(dest=='SFO',month==2 #Using filter
+
+-----------------------------------------------------------------------------------------------------------------------------
+Probability and sample
+
+kobe_streak <- calc_streak(kobe_basket) # Custom function calc_streak used to calculate the length of Hits and Miss
+sample(kobe_basket$shot,size=76,replace=TRUE) # Use sample function to create a sample space for kobe_basket shots of hit and miss
+table(sample(kobe_basket$shot,size=76,replace=TRUE)) # display total number of hits and miss

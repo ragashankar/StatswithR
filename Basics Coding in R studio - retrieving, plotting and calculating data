@@ -6,3 +6,8 @@ present$boys # Displays the column 'boys' in tbl 'present'
 total <- present %>%  mutate(total=boys+girls) # Calculate the total no. of boys and girls for each row and store in total column
 ggplot(data = present, aes(x = boys, y = girls)) + geom_line() # Displays a line graph for tbl present with x axis as boys and y axis as girls
 nycflights %>%  group_by(origin) %>% summarise(ot_dep_rate = sum(dep_type == "on time") / n()) %>% arrange(desc(ot_dep_rate)) # Using group by and arrange clause for grouping and sorting
+
+nycflights <- nycflights %>%  mutate(dep_type = ifelse(dep_delay < 5, "on time", "delayed")) # Using if-else statement
+nycflights %>% group_by(month) %>% summarise(mean_dd=mean(arr_delay))%>% arrange(desc(mean_dd)) # calculate Mean
+
+assfo_feb_flights <- nycflights %>% filter(dest=='SFO',month==2 #Using filter

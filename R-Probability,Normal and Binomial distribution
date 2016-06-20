@@ -1,0 +1,13 @@
+coin_outcomes <- c("heads", "tails") # Vectors heads and tails stored in a variable coin_outcomes
+sample(coin_outcomes, size = 1, replace = TRUE # Sampling the variable to get heads or tails(more like tossing)
+table(coin_outcomes) # View the table
+sim_fair_coin <- sample(coin_outcomes, size = 100, replace = TRUE)
+sim_unfair_coin <- sample(coin_outcomes,size=100,replace=TRUE,prob=c(0.2,0.8)) # Tossing an unfair coin which favours tails
+------------------------------------------------------------------------------------------------------------------------------
+calc_streak(kobe_basket$shot) # Custom function calc_streak use to calculate the length of  Hit and a miss - 1  consecutive 2 hits-2 and consecutive miss - 0
+kobe_streak <- calc_streak(kobe_basket$shot) # store the above result in kobe_streak variable
+ggplot(data=kobe_streak,aes(x=length))+ geom_histogram(binwidth=1) # plot histogram with length in x axis and binwidth as 1
+-------------------------------------------------------------------------------------------------------------------------------
+pnorm(24,mean=21,sd=5) # cal the percentile below the specified value
+qnorm(0.90,mean=21,sd=5 # cal the point where the percentile is mentioned
+dbinom(2,3,0.51) # cal the binomial distribution for n=3,k=2,p(success)=0.51
